@@ -375,21 +375,52 @@
 
       </div>
 
-      <form class="booking-form" id="appointmentForm">
+      <form
+  class="booking-form"
+  action="https://formspree.io/f/xojrprgd"
+  method="POST">
 
-        <input type="text" placeholder="Full Name" required>
+  <input
+    type="text"
+    name="fullname"
+    placeholder="Full Name"
+    required>
 
-        <input type="email" placeholder="Email Address" required>
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required>
 
-        <input type="tel" placeholder="Phone Number" required>
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    required>
 
-        <textarea rows="5" placeholder="How can we support you?"></textarea>
+  <select name="service" required>
 
-        <button type="submit" class="btn full-btn">
-          Submit Request
-        </button>
+    <option value="">Select Service</option>
 
-      </form>
+    <option>School Outreach</option>
+    <option>Workshop & Training</option>
+    <option>Workplace Wellness</option>
+    <option>University Wellness</option>
+    <option>Suicide Watch Support</option>
+
+  </select>
+
+  <textarea
+    name="message"
+    rows="5"
+    placeholder="How can we support you?"
+    required></textarea>
+
+  <button type="submit" class="btn full-btn">
+    Submit Request
+  </button>
+
+</form>
 
     </div>
 

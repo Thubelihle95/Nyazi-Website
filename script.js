@@ -18,19 +18,7 @@ faqQuestions.forEach(question => {
 
 });
 
-// BOOKING FORM
 
-const appointmentForm = document.getElementById("appointmentForm");
-
-appointmentForm.addEventListener("submit", function(e){
-
-  e.preventDefault();
-
-  alert("Your consultation request has been submitted successfully!");
-
-  appointmentForm.reset();
-
-});
 
 // CONTACT FORM
 
