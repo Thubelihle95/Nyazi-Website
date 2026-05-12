@@ -20,6 +20,8 @@ faqQuestions.forEach(question => {
 
 // MOBILE MENU
 
+// MOBILE MENU
+
 const menuToggle = document.getElementById("menuToggle");
 
 const mobileNav = document.getElementById("mobileNav");
@@ -27,6 +29,37 @@ const mobileNav = document.getElementById("mobileNav");
 menuToggle.addEventListener("click", () => {
 
   mobileNav.classList.toggle("active");
+
+});
+
+// MOBILE NAVIGATION LINKS
+
+const navLinks = document.querySelectorAll(".nav a");
+
+navLinks.forEach(link => {
+
+  link.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    // CLOSE MENU
+    mobileNav.classList.remove("active");
+
+    // GET TARGET SECTION
+    const targetId = this.getAttribute("href");
+
+    const targetSection = document.querySelector(targetId);
+
+    // WAIT FOR MENU TO CLOSE THEN SCROLL
+    setTimeout(() => {
+
+      targetSection.scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }, 300);
+
+  });
 
 });
 
