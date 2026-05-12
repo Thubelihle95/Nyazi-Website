@@ -30,7 +30,7 @@ menuToggle.addEventListener("click", () => {
 
 });
 
-// CLOSE MOBILE MENU AFTER CLICK
+// CLOSE MENU AFTER CLICK
 
 const navLinks = document.querySelectorAll(".nav a");
 
