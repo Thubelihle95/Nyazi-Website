@@ -33,3 +33,14 @@ contactForm.addEventListener("submit", function(e){
   contactForm.reset();
 
 });
+// MOBILE MENU
+
+const menuToggle = document.getElementById("menuToggle");
+
+const mobileNav = document.getElementById("mobileNav");
+
+menuToggle.addEventListener("click", () => {
+
+  mobileNav.classList.toggle("active");
+
+});
