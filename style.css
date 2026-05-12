@@ -73,7 +73,7 @@ img{
 }
 
 .logo-text h2{
-  font-size:22px;
+  font-size:24px;
   color:#0b4b8a;
   margin:0;
   line-height:1.2;
@@ -113,13 +113,14 @@ img{
 .btn{
   background:#0b4b8a;
   color:#fff;
-  padding:12px 22px;
+  padding:12px 24px;
   border-radius:10px;
   text-decoration:none;
   border:none;
   cursor:pointer;
   font-weight:600;
   transition:0.3s;
+  display:inline-block;
 }
 
 .btn:hover{
@@ -148,7 +149,7 @@ img{
 
 .hero{
   position:relative;
-  height:95vh;
+  min-height:95vh;
 
   background:
   linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
@@ -207,33 +208,45 @@ img{
   border-radius:20px;
 }
 
-/* COMMUNITY GALLERY */
+/* SERVICES */
 
-.community-gallery{
+.services-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
 }
 
-.gallery-card{
+.service-card{
   background:#fff;
+  padding:35px;
   border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  border-bottom:4px solid #6cab2f;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
   transition:0.3s;
 }
 
-.gallery-card:hover{
+.service-card:hover{
   transform:translateY(-5px);
 }
 
-.gallery-card img{
-  height:260px;
-  object-fit:cover;
+/* PROGRAMS */
+
+.program-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 
-.gallery-content{
-  padding:25px;
+.program-card{
+  background:#fff;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.program-card:hover{
+  transform:translateY(-5px);
 }
 
 /* MOTTO */
@@ -267,63 +280,6 @@ img{
 .motto-box ul li{
   padding:12px 0;
   border-bottom:1px solid #eee;
-}
-
-/* SERVICES */
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-
-.service-card{
-  background:#fff;
-  padding:35px;
-  border-radius:20px;
-  border-bottom:4px solid #6cab2f;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* PROGRAMS */
-
-.program-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-
-.program-card{
-  background:#fff;
-  padding:35px;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* BOOKING */
-
-.booking-container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-}
-
-.booking-form{
-  background:#fff;
-  padding:35px;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.booking-form input,
-.booking-form textarea,
-.booking-form select{
-  width:100%;
-  padding:15px;
-  margin-bottom:20px;
-  border:1px solid #ddd;
-  border-radius:10px;
-  font-family:inherit;
 }
 
 /* FAQ */
@@ -361,6 +317,33 @@ img{
 
 .faq-answer p{
   padding-bottom:20px;
+}
+
+/* BOOKING */
+
+.booking-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.booking-form{
+  background:#fff;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select{
+  width:100%;
+  padding:15px;
+  margin-bottom:20px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-family:inherit;
 }
 
 /* CONTACT */
@@ -410,21 +393,15 @@ img{
 
 .menu-toggle{
   display:none;
-  font-size:32px;
+  font-size:34px;
   cursor:pointer;
   color:#0b4b8a;
 }
 
-/* MOBILE BUTTON */
+/* MOBILE BOOKING */
 
-.mobile-btn{
+.mobile-booking{
   display:none;
-  background:#0b4b8a;
-  color:#fff !important;
-  padding:14px 20px;
-  border-radius:10px;
-  text-align:center;
-  margin-top:10px;
 }
 
 /* RESPONSIVE */
@@ -435,17 +412,6 @@ img{
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-
-    .mobile-booking{
-  display:block;
-  margin-top:15px;
-}
-
-.mobile-booking .btn{
-  width:100%;
-  text-align:center;
-  display:block;
-}
   }
 
   .menu-toggle{
@@ -456,7 +422,14 @@ img{
     display:none;
   }
 
-  .mobile-btn{
+  .mobile-booking{
+    display:block;
+    margin-top:15px;
+  }
+
+  .mobile-booking .btn{
+    width:100%;
+    text-align:center;
     display:block;
   }
 
@@ -483,7 +456,7 @@ img{
   }
 
   .nav.active{
-    max-height:600px;
+    max-height:700px;
     padding:20px;
   }
 
@@ -494,8 +467,8 @@ img{
   }
 
   .hero{
-    height:auto;
-    padding:120px 0;
+    min-height:auto;
+    padding:140px 0;
   }
 
   .hero h1{
@@ -533,9 +506,4 @@ img{
     font-size:32px;
   }
 
-}
-/* MOBILE BOOKING BUTTON */
-
-.mobile-booking{
-  display:none;
 }
