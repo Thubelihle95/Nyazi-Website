@@ -418,6 +418,7 @@ img{
 /* MOBILE BUTTON */
 
 .mobile-btn{
+  display:none;
   background:#0b4b8a;
   color:#fff !important;
   padding:14px 20px;
@@ -442,6 +443,10 @@ img{
 
   .desktop-btn{
     display:none;
+  }
+
+  .mobile-btn{
+    display:block;
   }
 
   .nav{
@@ -477,12 +482,21 @@ img{
     border-bottom:1px solid #eee;
   }
 
+  .hero{
+    height:auto;
+    padding:120px 0;
+  }
+
   .hero h1{
     font-size:40px;
   }
 
   .hero p{
     font-size:16px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
   }
 
   .about-grid,
