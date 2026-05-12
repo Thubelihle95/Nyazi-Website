@@ -60,7 +60,7 @@ img{
 }
 
 .logo-img{
-  width:70px;
+  width:120px;
   height:auto;
   object-fit:contain;
   display:block;
@@ -435,6 +435,17 @@ img{
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
+
+    .mobile-booking{
+  display:block;
+  margin-top:15px;
+}
+
+.mobile-booking .btn{
+  width:100%;
+  text-align:center;
+  display:block;
+}
   }
 
   .menu-toggle{
@@ -507,7 +518,7 @@ img{
   }
 
   .logo-img{
-    width:60px;
+    width:90px;
   }
 
   .logo-text h2{
@@ -522,4 +533,9 @@ img{
     font-size:32px;
   }
 
+}
+/* MOBILE BOOKING BUTTON */
+
+.mobile-booking{
+  display:none;
 }
