@@ -483,3 +483,14 @@ img{
   }
 
 }
+/* SMOOTH SCROLL */
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* FIXED HEADER OFFSET */
+
+section{
+  scroll-margin-top:120px;
+}

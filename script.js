@@ -18,21 +18,6 @@ faqQuestions.forEach(question => {
 
 });
 
-
-
-// CONTACT FORM
-
-const contactForm = document.getElementById("contactForm");
-
-contactForm.addEventListener("submit", function(e){
-
-  e.preventDefault();
-
-  alert("Your message has been sent successfully!");
-
-  contactForm.reset();
-
-});
 // MOBILE MENU
 
 const menuToggle = document.getElementById("menuToggle");
@@ -44,3 +29,35 @@ menuToggle.addEventListener("click", () => {
   mobileNav.classList.toggle("active");
 
 });
+
+// CLOSE MENU WHEN LINK CLICKED
+
+const navLinks = document.querySelectorAll(".nav a");
+
+navLinks.forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    mobileNav.classList.remove("active");
+
+  });
+
+});
+
+// CONTACT FORM
+
+const contactForm = document.getElementById("contactForm");
+
+if(contactForm){
+
+  contactForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Your message has been sent successfully!");
+
+    contactForm.reset();
+
+  });
+
+}
